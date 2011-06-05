@@ -1,6 +1,7 @@
 # ------------------------------------------------------------------------
 # Juan G. Hurtado oh-my-zsh theme
 # (Needs Git plugin for current_branch method)
+# Kurt Harriger - display last process exist code if not success
 # ------------------------------------------------------------------------
 
 # Color shortcuts
@@ -42,5 +43,5 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 # Prompt format
 PROMPT='
 %{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
-%{$BLUE%}>%{$RESET_COLOR%} '
+%(?..%? )%{$BLUE%}>%{$RESET_COLOR%} '
 RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
